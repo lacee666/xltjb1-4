@@ -206,7 +206,21 @@ photoPreview.addEventListener("click", async () => {
         return;
     }
 
+    if (!previousObjectUrl) {
+        return;
+    }
+
     flowBusy = true;
+
+    const link = document.createElement("a");
+    link.href = previousObjectUrl;
+    link.download = `emlek-${currentStep + 1}.jpg`;
+
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+
+    await new Promise(resolve => setTimeout(resolve, 500));
 
     await animateOut(photoPreview);
 
