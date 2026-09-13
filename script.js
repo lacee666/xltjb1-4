@@ -19,7 +19,7 @@ const steps = [
     },
     {
         text: "Ezt inkább hagyjuk…",
-        password: "",
+        password: "0",
         successText: "Rám se néztél…",
         photoText: "Készíts egy fotót az emlékről!"
     },
