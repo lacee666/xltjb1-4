@@ -1,7 +1,7 @@
 const steps = [
     {
         text: "Ahol először megláttál…",
-        password: "2025081803",
+        password: "202508181803",
         successText: "De legalább megittunk egy finom limonádét",
         photoText: "Készíts egy fotót az emlékről!"
     },
