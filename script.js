@@ -1,19 +1,19 @@
 const steps = [
     {
         text: "Ahol először megláttál…",
-        password: "1",
+        password: "2025081803",
         successText: "De legalább megittunk egy finom limonádét",
         photoText: "Készíts egy fotót az emlékről!"
     },
     {
         text: "Ahol először éreztél valamit…",
-        password: "2",
+        password: "202508221540",
         successText: "Még mindig tetszik a kockás inged.",
         photoText: "Készíts egy fotót az emlékről!"
     },
     {
         text: "Ahol az első közös képünk készült…",
-        password: "3",
+        password: "202508311712",
         successText: "Jó volt :)",
         photoText: "Készíts egy fotót az emlékről!"
     },
@@ -25,7 +25,7 @@ const steps = [
     },
     {
         text: "Ahol minden elkezdődött…",
-        password: "5",
+        password: "202509102220",
         successText: "A többi már csak történelem",
         photoText: "Készíts egy fotót az emlékről!"
     }
