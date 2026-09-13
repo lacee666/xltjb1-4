@@ -1,3 +1,4 @@
+```javascript
 const steps = [
     {
         text: "Ahol először megláttál…",
@@ -44,6 +45,7 @@ const photoInput = document.getElementById("photoInput");
 
 const photoPreview = document.getElementById("photoPreview");
 const previewImage = document.getElementById("previewImage");
+const savePhotoButton = document.getElementById("savePhotoButton");
 
 const progressBar = document.getElementById("progressBar");
 
@@ -201,12 +203,20 @@ photoInput.addEventListener("change", event => {
     previewImage.src = previousObjectUrl;
 });
 
-photoPreview.addEventListener("click", async () => {
-    if (flowBusy) {
+savePhotoButton.addEventListener("click", async () => {
+    if (flowBusy || !previousObjectUrl) {
         return;
     }
 
     flowBusy = true;
+
+    const link = document.createElement("a");
+    link.href = previousObjectUrl;
+    link.download = `emlek-${currentStep + 1}.jpg`;
+
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
 
     await animateOut(photoPreview);
 
@@ -239,3 +249,4 @@ function finish() {
 }
 
 showStep();
+```
