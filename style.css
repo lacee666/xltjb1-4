@@ -101,7 +101,7 @@ button {
 #textView {
     margin-bottom: 45px;
 
-    font-size: clamp(42px, 10.5vw, 69px);
+    font-size: clamp(42px, 12vw, 72px);
     font-weight: 700;
     line-height: 1.15;
     letter-spacing: -0.02em;
@@ -177,7 +177,7 @@ button {
 }
 
 #successView {
-    font-size: clamp(42px, 10.5vw, 69px);
+    font-size: clamp(42px, 12vw, 72px);
     font-weight: 700;
     line-height: 1.15;
     letter-spacing: -0.02em;
@@ -196,7 +196,7 @@ button {
 }
 
 #photoText {
-    font-size: clamp(42px, 10.5vw, 69px);
+    font-size: clamp(42px, 12vw, 72px);
     font-weight: 700;
     line-height: 1.15;
     letter-spacing: -0.02em;
