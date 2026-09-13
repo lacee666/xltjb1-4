@@ -1,0 +1,319 @@
+:root {
+    --background: #0f1117;
+    --surface: #181b24;
+    --surface-hover: #202431;
+    --text: #f5f7fb;
+    --muted: #969cab;
+    --accent: #ff6b9d;
+    --accent-text: #ffffff;
+    --error: #ff6b6b;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+    background: var(--background);
+    color: var(--text);
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+}
+
+body {
+    min-height: 100dvh;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    border: 0;
+}
+
+#app {
+    width: 100%;
+    min-height: 100dvh;
+
+    display: flex;
+    flex-direction: column;
+
+    padding:
+        max(20px, env(safe-area-inset-top))
+        max(20px, env(safe-area-inset-right))
+        max(20px, env(safe-area-inset-bottom))
+        max(20px, env(safe-area-inset-left));
+}
+
+.progressContainer {
+    width: 100%;
+    max-width: 520px;
+    height: 5px;
+
+    margin: 0 auto 30px;
+
+    background: var(--surface);
+
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+#progressBar {
+    width: 20%;
+    height: 100%;
+
+    background: var(--accent);
+
+    border-radius: inherit;
+
+    transition: width 0.5s ease;
+}
+
+#content {
+    width: 100%;
+    max-width: 520px;
+
+    flex: 1;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    text-align: center;
+}
+
+#textView {
+    margin-bottom: 30px;
+
+    font-size: clamp(28px, 7vw, 46px);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+}
+
+#passwordForm {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#passwordInput {
+    width: 100%;
+    height: 58px;
+
+    padding: 0 18px;
+
+    background: var(--surface);
+    color: var(--text);
+
+    border: 1px solid transparent;
+    border-radius: 16px;
+
+    outline: none;
+
+    text-align: center;
+    font-size: 20px;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+#passwordInput:focus {
+    border-color: var(--accent);
+    background: var(--surface-hover);
+}
+
+#passwordInput::placeholder {
+    color: var(--muted);
+}
+
+#passwordForm button {
+    width: 100%;
+    min-height: 58px;
+
+    padding: 0 20px;
+
+    background: var(--accent);
+    color: var(--accent-text);
+
+    border-radius: 16px;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: transform 0.15s ease;
+}
+
+#passwordForm button:active {
+    transform: scale(0.97);
+}
+
+#error {
+    min-height: 22px;
+
+    color: var(--error);
+
+    font-size: 15px;
+    font-weight: 500;
+}
+
+#successView {
+    font-size: clamp(28px, 7vw, 46px);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+
+    cursor: pointer;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+#photoView {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 25px;
+}
+
+#photoText {
+    font-size: clamp(28px, 7vw, 46px);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+}
+
+.cameraButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 58px;
+
+    padding: 0 25px;
+
+    background: var(--accent);
+    color: var(--accent-text);
+
+    border-radius: 16px;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: transform 0.15s ease;
+}
+
+.cameraButton:active {
+    transform: scale(0.97);
+}
+
+#photoInput {
+    display: none;
+}
+
+#photoPreview {
+    cursor: pointer;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+#previewImage {
+    display: block;
+
+    width: 100%;
+    max-height: 70dvh;
+
+    object-fit: contain;
+
+    border-radius: 18px;
+}
+
+.fadeIn {
+    animation: fadeIn 0.4s ease forwards;
+}
+
+.fadeOut {
+    animation: fadeOut 0.4s ease forwards;
+}
+
+.shake {
+    animation: shake 0.35s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-12px);
+    }
+}
+
+@keyframes shake {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(-8px);
+    }
+
+    40% {
+        transform: translateX(8px);
+    }
+
+    60% {
+        transform: translateX(-6px);
+    }
+
+    80% {
+        transform: translateX(6px);
+    }
+}
+
+@media (min-width: 700px) {
+    #app {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .progressContainer {
+        margin-bottom: 50px;
+    }
+}

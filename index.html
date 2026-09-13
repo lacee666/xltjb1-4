@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emlékek</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main id="app">
+
+    <div class="progressContainer">
+        <div id="progressBar"></div>
+    </div>
+
+    <div id="content">
+
+        <div id="textView"></div>
+
+        <form id="passwordForm">
+            <input
+                id="passwordInput"
+                type="text"
+                inputmode="numeric"
+                autocomplete="off"
+                placeholder="Írd be a kódot"
+            >
+
+            <div id="error"></div>
+
+            <button type="submit">
+                Tovább
+            </button>
+        </form>
+
+        <div id="successView"></div>
+
+        <div id="photoView">
+            <div id="photoText"></div>
+
+            <label class="cameraButton" for="photoInput">
+                📷 Fotó készítése
+            </label>
+
+            <input
+                id="photoInput"
+                type="file"
+                accept="image/*"
+                capture="user"
+            >
+        </div>
+
+        <div id="photoPreview">
+            <img id="previewImage" alt="Elkészített fotó">
+        </div>
+
+    </div>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
