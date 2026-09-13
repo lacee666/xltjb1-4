@@ -6,28 +6,28 @@ const steps = [
         photoText: "Készíts egy fotót az emlékről!"
     },
     {
-        text: "IDE JÖN A 2. STEP ELSŐ SORA",
+        text: "Ahol először éreztél valamit…",
         password: "2",
-        successText: "IDE JÖN A 2. STEP NEGYEDIK SORA",
-        photoText: "IDE JÖN A 2. STEP ÖTÖDIK SORA"
+        successText: "Még mindig tetszik a kockás inged.",
+        photoText: "Készíts egy fotót az emlékről!"
     },
     {
-        text: "IDE JÖN A 3. STEP ELSŐ SORA",
+        text: "Ahol az első közös képünk készült…",
         password: "3",
-        successText: "IDE JÖN A 3. STEP NEGYEDIK SORA",
-        photoText: "IDE JÖN A 3. STEP ÖTÖDIK SORA"
+        successText: "Jó volt :)",
+        photoText: "Készíts egy fotót az emlékről!"
     },
     {
-        text: "IDE JÖN A 4. STEP ELSŐ SORA",
-        password: "4",
-        successText: "IDE JÖN A 4. STEP NEGYEDIK SORA",
-        photoText: "IDE JÖN A 4. STEP ÖTÖDIK SORA"
+        text: "Ezt inkább hagyjuk…",
+        password: "",
+        successText: "Rám se néztél…",
+        photoText: "Készíts egy fotót az emlékről!"
     },
     {
-        text: "IDE JÖN AZ 5. STEP ELSŐ SORA",
+        text: "Ahol minden elkezdődött…",
         password: "5",
-        successText: "IDE JÖN AZ 5. STEP NEGYEDIK SORA",
-        photoText: "IDE JÖN AZ 5. STEP ÖTÖDIK SORA"
+        successText: "A többi már csak történelem",
+        photoText: "Készíts egy fotót az emlékről!"
     }
 ];
 
